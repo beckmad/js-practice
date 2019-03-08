@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+
+<div id="gallery">
+    <div class="photos">
+        <img src="img/1.jpg" alt="1">
+        <img src="img/2.jpg" alt="2">
+        <img src="img/3.jpg" alt="3">
+        <img src="img/4.jpg" alt="4">
+        <img src="img/5.jpg" alt="5">
+        <img src="img/6.jpg" alt="6">
+    </div>
+    <div class="buttons">
+        <input type="button" value="prev" class="prev">
+        <input type="button" value="next" class="next">
+    </div>
+</div>
+
+
+<form id="calculator" action="#" method="post">
+    <input type="text" class="el">
+    <input type="button" name="0" value="+" class="operator">
+    <input type="button" name="1" value="-" class="operator">
+    <input type="button" name="2" value="/" class="operator">
+    <input type="button" name="3" value="*" class="operator">
+    <input type="text" class="el">
+
+    <input type="button" value="=" class="btn">
+    <span class="show"></span>
+</form>
+
+<div class="login">
+    <form class="login__form" action="#">
+        <label for="name" class="visibility-hidden">Введите, пожалуйста, свое имя:</label>
+        <input id="name" type="text" name="name" class="login__text" placeholder="Ваше имя">
+
+        <label for="surname" class="visibility-hidden">Введите, пожалуйста, свою фамилию:</label>
+        <input id="surname" type="text" name="surname" class="login__text" placeholder="Ваша фамилия">
+
+        <label for="email" class="visibility-hidden">Введите, пожалуйста, свой email:</label>
+        <input id="email" type="email" name="email" class="login__text" placeholder="Email">
+
+        <label for="password" class="visibility-hidden">Введите, пожалуйста, пароль:</label>
+        <input id="password" type="password" name="password" class="login__text" placeholder="Пароль">
+
+        <input type="button" class="login__btn" value="Send">
+    </form>
+</div>
+
+
+<script src="js.js"></script>
+</body>
+</html>
