@@ -102,4 +102,44 @@ function Slider(images) {
         this.images[this.i].style.display = 'block';
     };
 }
+//scroll to top btn
+
+function scrollToTop() {
+    var t;
+    var top = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
+    if (top > 0) {
+        window.scrollBy(0, -100);
+        t = setTimeout('scrollToTop()', 20);
+    } else clearTimeout(t);
+    return false
+}
+
+function addTrackOmniture() {
+    s.tl(this, 'o', 'ScrollUpClick');
+}
+
+function toTopAction() {
+    var toTopLink = document.createElement('a');
+    toTopLink.className = 'toTopLink';
+    document.body.appendChild(toTopLink);
+    toTopLink.addEventListener('click', scrollToTop);
+    toTopLink.addEventListener('click', addTrackOmniture);
+
+    window.onscroll = function () {
+         var clientHeight = document.documentElement.clientHeight;
+         var scrollHeight = window.pageYOffset;
+        // var clientHeight = $(window).height();
+        // var scrollHeight = $(window).scrollTop();
+        console.log(clientHeight, scrollHeight);
+        // console.log($(window).height(), $(window).scrollTop());
+        if (clientHeight < scrollHeight) {
+            toTopLink.style.opacity = '1';
+        } else {
+            toTopLink.style.opacity = '0';
+        }
+    };
+
+}
+
+setTimeout(3000, toTopAction());
 
