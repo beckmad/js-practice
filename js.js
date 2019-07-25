@@ -143,3 +143,29 @@ function toTopAction() {
 
 setTimeout(3000, toTopAction());
 
+//accordeon
+window.addEventListener('load', function() {
+    let items = document.getElementsByClassName('list__item');
+    let contents = document.getElementsByClassName('list__content');
+    let listWrapper = document.getElementsByClassName('list__wrapper');
+
+    for (let i = 0; i < items.length; i++) {
+        items[i].addEventListener('click', function () {
+            this.classList.toggle('list__item--active');
+            for (let j = 0; j < items.length; j++) {
+                if (i === j) continue;
+                items[j].classList.remove('list__item--active');
+                contents[j].style.display = 'none';
+                contents[i].classList.remove('pulse');
+            }
+            if (items[i].classList.contains('list__item--active')) {
+                contents[i].style.display = 'block';
+                contents[i].classList.add('pulse');
+            } else {
+                contents[i].style.display = 'none';
+            }
+        })
+    }
+
+});
+//accordeon end
