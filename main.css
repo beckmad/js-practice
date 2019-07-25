@@ -161,7 +161,7 @@ input[type="submit"]{
     list-style: none;
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
+    margin: 50px auto;
     padding: 0;
     width: 460px;
     font-family: Arial, Helvetica, sans-serif;
