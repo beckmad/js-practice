@@ -1,85 +1,84 @@
-window.onload = function () {
-    // calculator
-    const inputs = document.getElementsByClassName('el');
-    const btn = document.querySelector('.btn');
-    const span = document.querySelector('.show');
-    const operators = document.getElementsByClassName('operator');
+// calculator
+const inputs = document.getElementsByClassName('el');
+const btn = document.querySelector('.btn');
+const span = document.querySelector('.show');
+const operators = document.getElementsByClassName('operator');
 
-    for (let i = 0; i < operators.length; i++) {
-        operators[i].addEventListener('click', function () {
-            this.classList.toggle('operator--active');
-        });
+for (let i = 0; i < operators.length; i++) {
+    operators[i].addEventListener('click', function () {
+        this.classList.toggle('operator--active');
+    });
+}
+
+for (let i = 0; i < inputs.length; i++) {
+    inputs[i].addEventListener('focus', function () {
+        btn.disabled = false;
+    });
+}
+
+
+btn.addEventListener('click', calc);
+
+function calc() {
+    const input1 = parseInt(inputs[0].value, 10);
+    const input2 = parseInt(inputs[1].value, 10);
+    let result = 0;
+    if (operators[0].classList.contains('operator--active')) {
+        result = input1 + input2;
+    } else if (operators[1].classList.contains('operator--active')) {
+        result = input1 - input2;
+    } else if (operators[2].classList.contains('operator--active')) {
+        result = input1 / input2;
+    } else if (operators[3].classList.contains('operator--active')) {
+        result = input1 * input2;
+    } else {
+        alert('You have to choose the operator');
     }
+    span.innerText = result;
+    btn.disabled = true;
+}
 
-    for (let i = 0; i < inputs.length; i++) {
-        inputs[i].addEventListener('focus', function () {
-            btn.disabled = false;
-        });
-    }
+// calculator end
+
+// gallery slider
+const prevBtn = document.querySelector('#gallery .buttons .prev');
+const nextBtn = document.querySelector('#gallery .buttons .next');
+const images = document.querySelectorAll('#gallery .photos img');
 
 
-    btn.addEventListener('click', calc);
+const catSlider = new Slider(images);
+console.log(catSlider);
+prevBtn.addEventListener('click', function () {
+    catSlider.prev();
+});
+nextBtn.addEventListener('click', function () {
+    catSlider.next();
+});
+// gallery slider end
 
-    function calc() {
-        const input1 = parseInt(inputs[0].value, 10);
-        const input2 = parseInt(inputs[1].value, 10);
-        let result = 0;
-        if (operators[0].classList.contains('operator--active')) {
-            result = input1 + input2;
-        } else if (operators[1].classList.contains('operator--active')) {
-            result = input1 - input2;
-        } else if (operators[2].classList.contains('operator--active')) {
-            result = input1 / input2;
-        } else if (operators[3].classList.contains('operator--active')) {
-            result = input1 * input2;
+// form
+const loginInputs = document.querySelectorAll('.login__text');
+const loginBtn = document.querySelector('.login__btn');
+loginBtn.addEventListener('click', formSent);
+
+let error = false;
+
+function formSent(e) {
+    for (let i = 0; i < loginInputs.length; i++) {
+        if (loginInputs[i].value === '') {
+            loginInputs[i].classList.add('login__text--error');
+            error = true;
         } else {
-            alert('You have to choose the operator');
-        }
-        span.innerText = result;
-        btn.disabled = true;
-    }
-
-    // calculator end
-
-    // gallery slider
-    const prevBtn = document.querySelector('#gallery .buttons .prev');
-    const nextBtn = document.querySelector('#gallery .buttons .next');
-    const images = document.querySelectorAll('#gallery .photos img');
-
-
-    const catSlider = new Slider(images);
-    console.log(catSlider);
-    prevBtn.addEventListener('click', function () {
-        catSlider.prev();
-    });
-    nextBtn.addEventListener('click', function () {
-        catSlider.next();
-    });
-    // gallery slider end
-
-    // form
-    const loginInputs = document.querySelectorAll('.login__text');
-    const loginBtn = document.querySelector('.login__btn');
-    loginBtn.addEventListener('click', formSent);
-
-    let error = false;
-
-    function formSent(e) {
-        for (let i = 0; i < loginInputs.length; i++) {
-            if (loginInputs[i].value === '') {
-                loginInputs[i].classList.add('login__text--error');
-                error = true;
-            } else {
-                loginInputs[i].classList.remove('login__text--error')
-            }
-        }
-        if (error) {
-            // e.preventDefault();
+            loginInputs[i].classList.remove('login__text--error')
         }
     }
+    if (error) {
+        // e.preventDefault();
+    }
+}
 
-    // form end
-};
+// form end
+
 
 function Slider(images) {
     this.images = images;
@@ -102,6 +101,7 @@ function Slider(images) {
         this.images[this.i].style.display = 'block';
     };
 }
+
 //scroll to top btn
 
 function scrollToTop() {
@@ -126,8 +126,8 @@ function toTopAction() {
     toTopLink.addEventListener('click', addTrackOmniture);
 
     window.onscroll = function () {
-         var clientHeight = document.documentElement.clientHeight;
-         var scrollHeight = window.pageYOffset;
+        var clientHeight = document.documentElement.clientHeight;
+        var scrollHeight = window.pageYOffset;
         // var clientHeight = $(window).height();
         // var scrollHeight = $(window).scrollTop();
         console.log(clientHeight, scrollHeight);
@@ -144,28 +144,74 @@ function toTopAction() {
 setTimeout(3000, toTopAction());
 
 //accordeon
-window.addEventListener('load', function() {
-    let items = document.getElementsByClassName('list__item');
-    let contents = document.getElementsByClassName('list__content');
-    let listWrapper = document.getElementsByClassName('list__wrapper');
+let items = document.getElementsByClassName('list__item');
+let contents = document.getElementsByClassName('list__content');
+// let listWrapper = document.getElementsByClassName('list__wrapper');
 
-    for (let i = 0; i < items.length; i++) {
-        items[i].addEventListener('click', function () {
-            this.classList.toggle('list__item--active');
-            for (let j = 0; j < items.length; j++) {
-                if (i === j) continue;
-                items[j].classList.remove('list__item--active');
-                contents[j].style.display = 'none';
-                contents[i].classList.remove('pulse');
-            }
-            if (items[i].classList.contains('list__item--active')) {
-                contents[i].style.display = 'block';
-                contents[i].classList.add('pulse');
-            } else {
-                contents[i].style.display = 'none';
-            }
-        })
-    }
+for (let i = 0; i < items.length; i++) {
+    items[i].addEventListener('click', function () {
+        this.classList.toggle('list__item--active');
+        for (let j = 0; j < items.length; j++) {
+            if (i === j) continue;
+            items[j].classList.remove('list__item--active');
+            contents[j].style.display = 'none';
+            contents[i].classList.remove('pulse');
+        }
+        if (items[i].classList.contains('list__item--active')) {
+            contents[i].style.display = 'block';
+            contents[i].classList.add('pulse');
+        } else {
+            contents[i].style.display = 'none';
+        }
+    })
+}
 
-});
 //accordeon end
+
+// list
+const mainUl = document.getElementById('main-ul');
+mainUl.addEventListener('click', showLi);
+
+function showLi(evt) {
+    var target = evt.target;
+    if (target.tagName === 'SPAN') {
+        if (target.nextElementSibling !== null) {
+            target.nextElementSibling.classList.toggle('li--active');
+        } else {
+            alert('There are no more child elements')
+        }
+    }
+}
+
+// list end
+
+// table sort
+
+const table = document.getElementById('table-sort');
+const tbody = table.getElementsByTagName('tbody')[0];
+const trs = tbody.getElementsByTagName('tr');
+let tableData = [];
+
+for (let i = 0; i < trs.length; i++) {
+    let age = trs[i].children[0].textContent;
+    let name = trs[i].children[1].textContent;
+    tableData[i] = {age, name}
+}
+tableData.sort(compareAge);
+
+table.addEventListener('click', function (evt) {
+    const target = evt.target;
+    console.log(target.dataset.type);
+    if (target.dataset.type === 'age') {
+        for (let i = 0; i < trs.length; i++) {
+            trs[i].children[0].textContent = tableData[i].age;
+            trs[i].children[1].textContent = tableData[i].name;
+        }
+    }
+});
+
+function compareAge(personA, personB) {
+    return personA.age - personB.age;
+}
+
+// table sort end
