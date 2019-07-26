@@ -47,7 +47,7 @@ const images = document.querySelectorAll('#gallery .photos img');
 
 
 const catSlider = new Slider(images);
-console.log(catSlider);
+//console.log(catSlider);
 prevBtn.addEventListener('click', function () {
     catSlider.prev();
 });
@@ -130,7 +130,7 @@ function toTopAction() {
         var scrollHeight = window.pageYOffset;
         // var clientHeight = $(window).height();
         // var scrollHeight = $(window).scrollTop();
-        console.log(clientHeight, scrollHeight);
+        // console.log(clientHeight, scrollHeight);
         // console.log($(window).height(), $(window).scrollTop());
         if (clientHeight < scrollHeight) {
             toTopLink.style.opacity = '1';
@@ -201,7 +201,7 @@ tableData.sort(compareAge);
 
 table.addEventListener('click', function (evt) {
     const target = evt.target;
-    console.log(target.dataset.type);
+    // console.log(target.dataset.type);
     if (target.dataset.type === 'age') {
         for (let i = 0; i < trs.length; i++) {
             trs[i].children[0].textContent = tableData[i].age;
