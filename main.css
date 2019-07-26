@@ -254,3 +254,44 @@ input[type="submit"]{
 
 
 /*accordeon end*/
+/*list*/
+#main-ul {
+    width: 250px;
+    margin: 50px auto;
+}
+
+#main-ul li > ul {
+    display: none;
+}
+
+#main-ul span:hover {
+    font-weight: bold;
+    cursor: pointer;
+    transition: .2s;
+}
+
+#main-ul .li--active {
+    display: block;
+}
+
+/*list*/
+
+/*table sort*/
+#table-sort {
+    width: 250px;
+    margin: 0 auto;
+}
+
+th[data-type="age"] {
+    cursor: pointer;
+}
+
+#table-sort tr th {
+    background: #eee;
+}
+
+#table-sort tbody tr {
+    background: #e1e1e1;
+}
+
+/*table sort end*/
