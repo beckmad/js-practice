@@ -215,3 +215,24 @@ function compareAge(personA, personB) {
 }
 
 // table sort end
+  // ask confirmation
+    const fieldset = document.getElementById('contents');
+    fieldset.addEventListener('click', askConfirm);
+
+
+    function askConfirm(evt) {
+        evt = evt || window.event;
+        const target = event.target || event.srcElement;
+
+        if (!(target.tagName === 'A' || target.tagName === 'I')) return;
+
+        let flag = false;
+        if (target.tagName === 'A') {
+            flag = confirm(`Уйти на ${target}?`)
+        } else if (target.tagName === 'I') {
+            flag = confirm(`Уйти на ${target.parentNode}?`)
+        }
+        if (!flag) evt.preventDefault();
+    }
+
+    // ask confirmation end
