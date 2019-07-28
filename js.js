@@ -236,3 +236,16 @@ function compareAge(personA, personB) {
     }
 
     // ask confirmation end
+    // mini gallery
+    const thumbs = document.getElementById('thumbs');
+    const largeImg = document.getElementById('largeImg');
+    thumbs.addEventListener('click', changeImage);
+
+    function changeImage(evt) {
+        evt.preventDefault();
+        const target = evt.target;
+        if (target.tagName !== 'IMG') return;
+        largeImg.src = target.src;
+    }
+
+    // mini gallery end
