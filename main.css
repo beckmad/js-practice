@@ -295,3 +295,26 @@ th[data-type="age"] {
 }
 
 /*table sort end*/
+#mini-gallery {
+    width: 600px;
+    margin: 0 auto;
+}
+#largeImg {
+    border: solid 1px #ccc;
+    width: 600px;
+    height: 400px;
+    padding: 5px;
+}
+
+#thumbs a {
+    border: solid 1px #ccc;
+    width: 107px;
+    height: 87px;
+    padding: 3px;
+    margin: 2px;
+    float: left;
+}
+
+#thumbs a:hover {
+    border-color: #FF9900;
+}
