@@ -144,28 +144,21 @@ function toTopAction() {
 setTimeout(3000, toTopAction());
 
 //accordeon
-let items = document.getElementsByClassName('list__item');
-let contents = document.getElementsByClassName('list__content');
-// let listWrapper = document.getElementsByClassName('list__wrapper');
-
-for (let i = 0; i < items.length; i++) {
-    items[i].addEventListener('click', function () {
-        this.classList.toggle('list__item--active');
-        for (let j = 0; j < items.length; j++) {
-            if (i === j) continue;
-            items[j].classList.remove('list__item--active');
-            contents[j].style.display = 'none';
-            contents[i].classList.remove('pulse');
-        }
-        if (items[i].classList.contains('list__item--active')) {
-            contents[i].style.display = 'block';
-            contents[i].classList.add('pulse');
+const list = document.querySelector('.list');
+    list.addEventListener('click', function (evt) {
+        let target = evt.target;
+        if (!target.classList.contains('list__item')) return;
+        target.classList.toggle('list__item--active');
+        target.classList.remove('pulse');
+        
+        if (target.classList.contains('list__item--active')) {
+            target.nextElementSibling.style.display = 'block';
+            target.classList.add('pulse');
         } else {
-            contents[i].style.display = 'none';
+            target.nextElementSibling.style.display = 'none'
         }
-    })
-}
 
+    });
 //accordeon end
 
 // list
