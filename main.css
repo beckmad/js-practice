@@ -322,7 +322,7 @@ th[data-type="age"] {
 text-decoration: none;
 outline: none;
 display: inline-block;
-margin: 10px 20px;
+margin: 50px auto;
 padding: 15px 30px;
 overflow: hidden;
 border: 2px solid;
@@ -342,6 +342,7 @@ rgba(30,255,188,1) 50%, rgba(30,255,188,1) 75%, rgba(255,255,255,1) 75%, rgba(25
 background-size: 10px 10px;
 color: #FF50E5;
 }
+
 @keyframes stripes {
 0% {background-position: 0 0;}
 100% {background-position: 50px 0;}
