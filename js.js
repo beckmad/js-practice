@@ -1,3 +1,67 @@
+//doge
+    (function () {
+        const btn = document.getElementById('dogeBtn');
+        const imgs = [
+            {width: '50px', height: '50px', src: 'img/1.png'},
+            {width: '50px', height: '50px', src: 'img/2.png'},
+            {width: '50px', height: '50px', src: 'img/3.png'},
+            {width: '50px', height: '50px', src: 'img/4.png'},
+            {width: '50px', height: '65px', src: 'img/5.png'},
+            {width: '50px', height: '50px', src: 'img/6.png'},
+            {width: '50px', height: '50px', src: 'img/7.png'},
+            {width: '50px', height: '50px', src: 'img/8.png'},
+            {width: '50px', height: '50px', src: 'img/9.png'},
+            {width: '50px', height: '50px', src: 'img/10.png'},
+            {width: '50px', height: '50px', src: 'img/11.png'},
+            {width: '50px', height: '50px', src: 'img/12.png'}
+
+        ];
+        btn.style.cssText = 'margin: 50px auto; border: none; border-radius: 2px';
+        btn.addEventListener('click', () => {
+            const idPrevent = setInterval(() => {
+                setTimeout(createImg, 100, imgs[getRand(0, 11)]);
+                setTimeout(createImg, 200, imgs[getRand(0, 11)]);
+                setTimeout(createImg, 300, imgs[getRand(0, 11)]);
+                setTimeout(createImg, 400, imgs[getRand(0, 11)]);
+                setTimeout(createImg, 500, imgs[getRand(0, 11)]);
+                setTimeout(createImg, 600, imgs[getRand(0, 11)]);
+                setTimeout(createImg, 700, imgs[getRand(0, 11)]);
+                setTimeout(createImg, 800, imgs[getRand(0, 11)]);
+                setTimeout(createImg, 900, imgs[getRand(0, 11)]);
+                setTimeout(createImg, 1000, imgs[getRand(0, 11)]);
+                setTimeout(createImg, 1100, imgs[getRand(0, 11)]);
+                setTimeout(createImg, 1200, imgs[getRand(0, 11)]);
+            }, 200);
+
+            setTimeout(() => {
+                clearInterval(idPrevent)
+            }, 4000)
+        }, {once: true});
+
+        function getRand(min = 0, max = 100) {
+            let rand = min + Math.random() * (max - min + 1);
+            return Math.floor(rand);
+        }
+
+        function createImg({width = '300px', height = '300px', src = ''} = {}) {
+
+
+            const clientWidth = document.documentElement.clientWidth;
+            const clientHeight = document.documentElement.clientHeight;
+            const img = document.createElement('img');
+            img.src = src;
+            img.style.width = width;
+            img.style.height = height;
+            img.classList.add('draggable-div');
+
+            img.style.position = 'absolute';
+            img.style.left = getRand(0, clientWidth - parseInt(img.style.width)) + 'px';
+            img.style.top = getRand(0, clientHeight - parseInt(img.style.height)) + 'px';
+
+            document.body.append(img);
+        }
+    })();
+//doge end
 // calculator
 const inputs = document.getElementsByClassName('el');
 const btn = document.querySelector('.btn');
