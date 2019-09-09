@@ -175,16 +175,11 @@ function scrollToTop() {
     return false
 }
 
-function addTrackOmniture() {
-    s.tl(this, 'o', 'ScrollUpClick');
-}
-
 function toTopAction() {
     var toTopLink = document.createElement('a');
     toTopLink.className = 'toTopLink';
     document.body.appendChild(toTopLink);
     toTopLink.addEventListener('click', scrollToTop);
-    toTopLink.addEventListener('click', addTrackOmniture);
 
     window.onscroll = function () {
         var clientHeight = document.documentElement.clientHeight;
