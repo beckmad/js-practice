@@ -319,6 +319,8 @@ th[data-type="age"] {
 }
 /*dogeBtn*/
 #dogeBtn {
+margin: 50px auto;
+width: 180px;
 text-decoration: none;
 outline: none;
 display: inline-block;
