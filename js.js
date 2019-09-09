@@ -1,25 +1,22 @@
 //doge
-(function () {
+    (function () {
         const btn = document.getElementById('dogeBtn');
         const imgs = [
-            {width: '50px', height: '50px', src: 'doge/img/1.png'},
-            {width: '50px', height: '50px', src: 'doge/img/2.png'},
-            {width: '50px', height: '50px', src: 'doge/img/3.png'},
-            {width: '50px', height: '50px', src: 'doge/img/4.png'},
-            {width: '50px', height: '65px', src: 'doge/img/5.png'},
-            {width: '50px', height: '50px', src: 'doge/img/6.png'},
-            {width: '50px', height: '50px', src: 'doge/img/7.png'},
-            {width: '50px', height: '50px', src: 'doge/img/8.png'},
-            {width: '50px', height: '50px', src: 'doge/img/9.png'},
-            {width: '50px', height: '50px', src: 'doge/img/10.png'},
-            {width: '50px', height: '50px', src: 'doge/img/11.png'},
-            {width: '50px', height: '50px', src: 'doge/img/12.png'}
+            {width: '50px', height: '50px', src: 'img/doge/1.png'},
+            {width: '50px', height: '50px', src: 'img/doge/2.png'},
+            {width: '50px', height: '50px', src: 'img/doge/3.png'},
+            {width: '50px', height: '50px', src: 'img/doge/4.png'},
+            {width: '50px', height: '65px', src: 'img/doge/5.png'},
+            {width: '50px', height: '50px', src: 'img/doge/6.png'},
+            {width: '50px', height: '50px', src: 'img/doge/7.png'},
+            {width: '50px', height: '50px', src: 'img/doge/8.png'},
+            {width: '50px', height: '50px', src: 'img/doge/9.png'},
+            {width: '50px', height: '50px', src: 'img/doge/10.png'},
+            {width: '50px', height: '50px', src: 'img/doge/11.png'},
+            {width: '50px', height: '50px', src: 'img/doge/12.png'}
 
         ];
-        btn.style.cssText = 'margin: 50px auto; border: none; border-radius: 2px';
-        btn.addEventListener('click', (evt) => {
-            const target = evt.target;
-            target.style.background = '#00FF7F';
+        btn.addEventListener('click', () => {
             const idPrevent = setInterval(() => {
                 setTimeout(createImg, 100, imgs[getRand(0, 11)]);
                 setTimeout(createImg, 200, imgs[getRand(0, 11)]);
@@ -46,8 +43,6 @@
         }
 
         function createImg({width = '300px', height = '300px', src = ''} = {}) {
-
-
             const clientWidth = document.documentElement.clientWidth;
             const clientHeight = document.documentElement.clientHeight;
             const img = document.createElement('img');
