@@ -7,6 +7,8 @@
 body {
     width: 100%;
     margin: 0;
+     display: flex;
+     flex-direction: column;
 }
 
 button:active,
@@ -319,8 +321,6 @@ th[data-type="age"] {
 }
 /*dogeBtn*/
 #dogeBtn {
-margin: 50px auto;
-width: 180px;
 text-decoration: none;
 outline: none;
 display: inline-block;
