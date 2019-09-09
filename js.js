@@ -2,18 +2,18 @@
     (function () {
         const btn = document.getElementById('dogeBtn');
         const imgs = [
-            {width: '50px', height: '50px', src: 'img/doge/1.png'},
-            {width: '50px', height: '50px', src: 'img/doge/2.png'},
-            {width: '50px', height: '50px', src: 'img/doge/3.png'},
-            {width: '50px', height: '50px', src: 'img/doge/4.png'},
-            {width: '50px', height: '65px', src: 'img/doge/5.png'},
-            {width: '50px', height: '50px', src: 'img/doge/6.png'},
-            {width: '50px', height: '50px', src: 'img/doge/7.png'},
-            {width: '50px', height: '50px', src: 'img/doge/8.png'},
-            {width: '50px', height: '50px', src: 'img/doge/9.png'},
-            {width: '50px', height: '50px', src: 'img/doge/10.png'},
-            {width: '50px', height: '50px', src: 'img/doge/11.png'},
-            {width: '50px', height: '50px', src: 'img/doge/12.png'}
+            {width: '200px', height: '200px', src: 'img/doge/1.png'},
+            {width: '200px', height: '200px', src: 'img/doge/2.png'},
+            {width: '200px', height: '200px', src: 'img/doge/3.png'},
+            {width: '200px', height: '200px', src: 'img/doge/4.png'},
+            {width: '200px', height: '220px', src: 'img/doge/5.png'},
+            {width: '200px', height: '200px', src: 'img/doge/6.png'},
+            {width: '200px', height: '200px', src: 'img/doge/7.png'},
+            {width: '200px', height: '200px', src: 'img/doge/8.png'},
+            {width: '200px', height: '200px', src: 'img/doge/9.png'},
+            {width: '200px', height: '200px', src: 'img/doge/10.png'},
+            {width: '200px', height: '200px', src: 'img/doge/11.png'},
+            {width: '200px', height: '200px', src: 'img/doge/12.png'}
 
         ];
         btn.addEventListener('click', () => {
