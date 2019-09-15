@@ -12,6 +12,15 @@
 
 <button id="dogeBtn">Don't click</button>
 
+<div id="search-container">
+    <div id="loading-block">Загрузка...</div>
+    <div id="filter-block" style="display: none;">
+        <input type="text" placeholder="название города" id="filter-input">
+
+        <div id="filter-result"></div>
+    </div>
+</div>
+
 <div id="gallery">
     <div class="photos">
         <img src="img/1.jpg" alt="1">
@@ -26,7 +35,6 @@
         <input type="button" value="next" class="next">
     </div>
 </div>
-
 
 <form id="calculator" action="#" method="post">
     <input type="text" class="el">
@@ -65,21 +73,24 @@
             Окружение: DOM, BOM и JS <br>
             Дерево DOM <br>
             Работа с DOM из консоли <br>
-            Навигация по DOM-элементам</div>
+            Навигация по DOM-элементам
+        </div>
     </div>
     <div class="list__wrapper">
         <span class="list__item">События в деталях</span>
         <div class="list__content ">
             Мышь: клики, кнопка, координаты <br>
             Мышь: отмена выделения, невыделяемые элементы <br>
-            Мышь: движение mouseover/out, mouseenter/leave</div>
+            Мышь: движение mouseover/out, mouseenter/leave
+        </div>
     </div>
     <div class="list__wrapper">
         <span class="list__item">Основы работы с событиями</span>
         <div class="list__content ">
             Введение в браузерные события <br>
             Порядок обработки событий <br>
-            Объект события</div>
+            Объект события
+        </div>
     </div>
     <div class="list__wrapper">
         <span class="list__item">Структуры данных</span>
@@ -87,13 +98,15 @@
             Объекты: перебор свойств <br>
             Объекты: передача по ссылке <br>
             Массивы с числовыми индексами <br>
-            Массивы: методы</div>
+            Массивы: методы
+        </div>
     </div>
     <div class="list__wrapper">
         <span class="list__item">Замыкания, область видимости</span>
         <div class="list__content ">
             Глобальный объект <br>
-            Замыкания, функции изнутри</div>
+            Замыкания, функции изнутри
+        </div>
     </div>
 </div>
 <!--list-->
@@ -208,14 +221,19 @@
     <p><img id="largeImg" src="https://picsum.photos/id/0/500/400" alt="Large image"></p>
 
     <div id="thumbs">
-        <a href="https://picsum.photos/id/1/500/400" title="Image 2"><img width="100px" src="https://picsum.photos/id/1/500/400"></a>
-        <a href="https://picsum.photos/id/2/500/400" title="Image 3"><img width="100px" src="https://picsum.photos/id/2/500/400"></a>
-        <a href="https://picsum.photos/id/3/500/400" title="Image 4"><img width="100px" src="https://picsum.photos/id/3/500/400"></a>
-        <a href="https://picsum.photos/id/4/500/400" title="Image 5"><img width="100px" src="https://picsum.photos/id/4/500/400"></a>
-        <a href="https://picsum.photos/id/5/500/400" title="Image 6"><img width="100px" src="https://picsum.photos/id/5/500/400"></a>
+        <a href="https://picsum.photos/id/1/500/400" title="Image 2"><img width="100px"
+                                                                          src="https://picsum.photos/id/1/500/400"></a>
+        <a href="https://picsum.photos/id/2/500/400" title="Image 3"><img width="100px"
+                                                                          src="https://picsum.photos/id/2/500/400"></a>
+        <a href="https://picsum.photos/id/3/500/400" title="Image 4"><img width="100px"
+                                                                          src="https://picsum.photos/id/3/500/400"></a>
+        <a href="https://picsum.photos/id/4/500/400" title="Image 5"><img width="100px"
+                                                                          src="https://picsum.photos/id/4/500/400"></a>
+        <a href="https://picsum.photos/id/5/500/400" title="Image 6"><img width="100px"
+                                                                          src="https://picsum.photos/id/5/500/400"></a>
     </div>
 </div>
 <!--mini gallery end-->
-<script src="js.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
