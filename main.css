@@ -373,22 +373,19 @@ th[data-type="age"] {
 
 /*cities*/
 #search-container {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-bottom: 50px;
-    border: 2px solid lightseagreen;
+    border: 1px solid lightseagreen;
     border-radius: 3px;
 }
 
 #filter-input {
     width: 200px;
     padding: 10px 20px;
-    border: 2px solid lightseagreen;
+    border: 1px solid lightseagreen;
 
 }
 
@@ -397,7 +394,7 @@ th[data-type="age"] {
     height: 300px;
     overflow: scroll;
     text-align: center;
-    border: 2px solid lightseagreen;
+    border: 1px solid lightseagreen;
 }
 
 /*cities end*/
