@@ -13,7 +13,34 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-
+    
+<div id="cookie-container">
+    <div>
+        Поиск cookie: <input type="text" id="filter-name-input" placeholder="имя cookie">
+    </div>
+    <div>
+        Добавить cookie:<br>
+        <input type="text" id="add-name-input" placeholder="имя cookie"><br>
+        <input type="text" id="add-value-input" placeholder="значение cookie"><br>
+        <button id="add-button">добавить cookie</button>
+    </div>
+    <div id="list-block">
+        Доступные cookie:
+        <table id="list-table">
+            <thead>
+            <tr>
+                <th>имя</th>
+                <th>значение</th>
+                <th>удалить</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- dynamic content -->
+            </tbody>
+        </table>
+    </div>
+</div>
+    
 <button id="dogeBtn">Don't click</button>
 
 <div id="search-container">
