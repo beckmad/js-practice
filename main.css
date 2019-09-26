@@ -398,3 +398,63 @@ th[data-type="age"] {
 }
 
 /*cities end*/
+
+/*cookie*/
+#cookie-container {
+    padding: 20px 50px;
+    border: 2px solid #edeef0;
+    margin-bottom: 50px;
+    border-radius: 3px;
+}
+
+#cookie-container > div {
+    padding: 5px;
+    border: 2px inset #e6edf5;
+    margin-bottom: 10px;
+    border-radius: 3px;
+}
+
+#cookie-container > div:last-child {
+    margin-bottom: 0;
+}
+
+#add-button {
+    padding: 5px;
+    border-radius: 3px;
+}
+
+#add-button:active {
+    box-shadow: 1px 0 0 #000;
+}
+
+#cookie-container input {
+    font-family: inherit;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: 5px 0;
+}
+
+#cookie-container table {
+    width: 100%;
+}
+
+#cookie-container table td,
+#cookie-container table th {
+    padding: 5px;
+    text-align: center;
+}
+
+#cookie-container button {
+    font-family: inherit;
+}
+
+#cookie-container tbody tr {
+    background: #edeef0;
+}
+
+#cookie-container tbody tr:nth-child(odd) {
+    background: #e6edf5;
+}
+
+/*cookie*/
