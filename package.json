@@ -1,0 +1,25 @@
+{
+  "name": "js-practice",
+  "version": "1.0.0",
+  "description": "**Hi friend! Here I use only native js :)**   **GitHub Pages:** [js-practice](https://beckmad.github.io/js-practice/)",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beckmad/js-practice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/beckmad/js-practice/issues"
+  },
+  "homepage": "https://github.com/beckmad/js-practice#readme",
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.1"
+  }
+}
